@@ -20,3 +20,6 @@ path = "src/lib.rs"
 [[bin]]
 name = "worlds_simplest_kata"
 path = "src/main.rs"
+
+[lints.clippy]
+pedantic = "warn"
