@@ -13,7 +13,7 @@ For the Rust edition, there are five types of errors:
 - [unit test](https://doc.rust-lang.org/cargo/commands/cargo-test.html)
 - [formatting](https://github.com/rust-lang/rustfmt)
 - [linting](https://github.com/rust-lang/rust-clippy)
-- [doc linting](https://doc.rust-lang.org/rustdoc/lints.html).
+- [doc linting](https://doc.rust-lang.org/rustdoc/lints.html)
 
 There are several goals for this kata:
 
