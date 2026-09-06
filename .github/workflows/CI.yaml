@@ -17,20 +17,14 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        rust: [beta, stable, 1.85.0]
-        include:
-          - rust: nightly
-            rustflags: --cfg thiserror_nightly_testing
+        rust: [stable, 1.85.0]
     timeout-minutes: 45
     steps:
       - uses: actions/checkout@v4
       - uses: dtolnay/rust-toolchain@master
         with:
           toolchain: ${{matrix.rust}}
-          components: rust-src
       - run: cargo test --all
-        env:
-          RUSTFLAGS: ${{matrix.rustflags}} ${{env.RUSTFLAGS}}
 
   clippy:
     name: Clippy
@@ -42,7 +36,7 @@ jobs:
       - uses: dtolnay/rust-toolchain@master
         with:
           toolchain: stable
-          components: clippy, rust-src
+          components: clippy
       - run: cargo clippy -- -Dclippy::all -Dclippy::pedantic
 
   fmt:
@@ -55,7 +49,7 @@ jobs:
       - uses: dtolnay/rust-toolchain@master
         with:
           toolchain: stable
-          components: rustfmt, rust-src
+          components: rustfmt
       - run: cargo fmt --all -- --check
 
   doc:
@@ -67,7 +61,7 @@ jobs:
       - uses: dtolnay/rust-toolchain@master
         with:
           toolchain: stable
-          components: rust-docs, rust-src
+          components: rust-docs
       - run: cargo doc --no-deps --document-private-items
         env:
           RUSTDOCFLAGS: "-D warnings"

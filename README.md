@@ -25,6 +25,7 @@ There are several goals for this kata:
 ## How To
 
 * Fork the repo.
+* Enable Actions on your fork.
 * Make it green.
 * ...
 * Profit!
