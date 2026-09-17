@@ -63,14 +63,4 @@ Here's your mission:
 
 ## Spoiler Alert
 
-...
-
-_Don't read this until you've completed the kata._
-
-...
-
-_Seriously, don't read this..._
-
-...
-
-OK, if you've completed the kata, switch over to the CoPilot branch and see how it did. 
+This is CoPilot's attempt at completing the kata. You can see the [original PR here](https://github.com/folkengine/wsk_CoPilot2/pull/1).
